@@ -20,6 +20,10 @@ public class MaquinaCafe {
 		this.id=Integer.toString(counter);
 		rellenarDepositos();
 	}
+	public MaquinaCafe(String id) {
+		this.id = id;
+		rellenarDepositos();
+	}
 	public boolean apagar() {
 		this.cafeServidos = 0;
 		this.capuccinoSevidos = 0;
@@ -85,5 +89,33 @@ public class MaquinaCafe {
 		System.out.println(" - Depósito de Leche: " + leche + " kg");
 		System.out.println(" - Depósito de Chocolate: " + chocolate + " kg");		
 		return 0.0;
+	}
+	@Override
+	public boolean equals(Object otro) {
+		boolean resultado = true;
+		MaquinaCafe otraMaquinaCafe;
+		try {
+			otraMaquinaCafe = (MaquinaCafe)otro;
+			resultado=otraMaquinaCafe.id.equals(this.id);
+		}catch (Exception e) {
+			resultado = false;
+		}
+
+		return resultado;
+	}
+	
+	@Override
+	public String toString() {
+		return this.id;
+	}
+	
+	@Override 
+	public int compareTo(Object otro) {
+		int resultado = 0;
+		try {
+			resultado=(int) (this.importe - ((MaquinaCafe)otro).importe);
+		} catch (Exception e) {
+			resultado = 0;
+		}
 	}
 }
