@@ -14,7 +14,8 @@ public class coffeBreack {
 		MaquinaCafe clonMaquina1 = new MaquinaCafe("1");
 		System.out.println(maquina1.equals(clonMaquina1));
 		System.out.println(maquina1.toString());
-		
-		int [] i= new int [5];
+		MaquinaCafe[] conjuntoCafes = new MaquinaCafe[3];
+		MaquinaCafe primera = new MaquinaCafe();
+		conjuntoCafes[0] 
 	}
 }

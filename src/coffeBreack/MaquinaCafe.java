@@ -3,7 +3,7 @@ package coffeBreack;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class MaquinaCafe {
+public class MaquinaCafe implements Comparable<MaquinaCafe>{
 	private String id;
 	private static int counter;
 	private double cafe;
@@ -109,13 +109,8 @@ public class MaquinaCafe {
 		return this.id;
 	}
 	
-	@Override 
-	public int compareTo(Object otro) {
-		int resultado = 0;
-		try {
-			resultado=(int) (this.importe - ((MaquinaCafe)otro).importe);
-		} catch (Exception e) {
-			resultado = 0;
-		}
+	@Override
+	public int compareTo(MaquinaCafe otro) {
+		return (int) (this.importe - ((MaquinaCafe)otro).importe);
 	}
 }
