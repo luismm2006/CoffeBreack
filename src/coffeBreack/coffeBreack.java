@@ -1,5 +1,7 @@
 package coffeBreack;
 
+import java.util.Arrays;
+
 public class coffeBreack {
 	public static void main(String[] args) {
 		MaquinaCafe maquina1 = new MaquinaCafe();
@@ -15,7 +17,13 @@ public class coffeBreack {
 		System.out.println(maquina1.equals(clonMaquina1));
 		System.out.println(maquina1.toString());
 		MaquinaCafe[] conjuntoCafes = new MaquinaCafe[3];
-		MaquinaCafe primera = new MaquinaCafe();
-		conjuntoCafes[0] 
+		conjuntoCafes[0]=new MaquinaCafe();
+		conjuntoCafes[1]=new MaquinaCafe();
+		conjuntoCafes[2]=new MaquinaCafe();
+		conjuntoCafes[0].setImporte(200);
+		conjuntoCafes[1].setImporte(3);
+		conjuntoCafes[2].setImporte(4000);
+		Arrays.sort(conjuntoCafes);
+		System.out.println();
 	}
 }

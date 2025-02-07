@@ -113,4 +113,7 @@ public class MaquinaCafe implements Comparable<MaquinaCafe>{
 	public int compareTo(MaquinaCafe otro) {
 		return (int) (this.importe - ((MaquinaCafe)otro).importe);
 	}
+	public void setImporte(double importe) {
+		this.importe = importe;
+	}
 }
